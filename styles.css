@@ -1,0 +1,263 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.h1 {
+    font-size: 32px;
+}
+
+.h2 {
+   font-size: 24px; 
+}
+
+.h3 {
+    font-size: 16px;
+}
+
+.h4, p, a {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.cv-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    /* margin-top: 20px; */
+}
+
+.inner-wrapper {
+    width: 100%;
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header-wrapper, .main-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left {
+    width: 25%;
+}
+
+.right {
+    width: 75%;
+    padding: 30px 0 30px 40px;
+}
+
+.avatar-wrapper {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.avatar {
+    position: absolute;
+    top: -30px;
+    width: 100%;
+    height: auto;
+}
+
+.title-wrapper {
+    background-color: rgba(240, 219, 35, 0.8);
+    display: flex;
+    flex-direction: column;
+}
+
+.title-wrapper > * {
+    margin-bottom: 5px;
+}
+
+.title-name {
+    margin-bottom: 10px;
+}
+
+.title-profesion {
+    margin-bottom: auto;
+}
+
+.title-contacts-wrp {
+    display: flex;   
+}
+
+.title-contacts-wrp span {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+
+.skills-wrapper {
+    padding-top: 30px;
+    padding-right: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.skills-technical, .skills-language {
+    padding-bottom: 30px;
+}
+
+.skills-technical > .h3, .skills-language > .h3 {
+    margin-bottom: 15px;
+}
+
+.skill-rating-wrp {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.skill-rating-wrp .h4 {
+    margin-bottom: 5px;
+}
+
+.rating-wrp {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rating {
+    width: 19%;
+    height: 3px;
+    background: #ccc;
+}
+
+.rating-well {
+    background: black;
+}
+
+.description-wrapper {
+    padding-bottom: 0;
+}
+
+.description-section {
+    margin-bottom: 25px;
+}
+
+.description-section .h3 {
+    margin-bottom: 15px;
+}
+
+.description-section-item {
+    margin-bottom: 15px;
+}
+
+.description-section-item > * {
+    margin-bottom: 5px;
+}
+
+.description-section > *:last-child {
+    margin-bottom: 0;
+}
+
+.generate-pdf {
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    background: rgb(187, 115, 7);
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.generate-pdf p {
+    color: white;
+}
+
+.big-screen-pdf {
+    display: flex;
+}
+
+.small-screen-pdf {
+    display: none;
+}
+
+@media screen and (max-width: 1024px) {
+    .skills-wrapper {
+        padding-left: 20px;
+    }
+
+    .description-wrapper {
+        padding-right: 20px;
+    }
+}
+
+@media screen and (max-width: 910px) {
+    .avatar-wrapper {
+        height: 200px;
+    }
+
+    .avatar {
+        top: -20px;
+    }
+
+    .left {
+        width: 35%;
+    }
+
+    .right {
+        width: 65%;
+    }
+
+    .title-wrapper {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .title-contacts-wrp:first-of-type {
+        flex-direction: column;
+    }
+
+    .title-contacts-wrp:first-of-type span {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .header-wrapper, .main-wrapper {
+        flex-direction: column;
+    }
+
+    .left, .right {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .avatar-wrapper {
+        height: 300px;
+        padding: 0;
+    }
+
+    .title-name, .title-profesion {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .big-screen-pdf {
+        display: none;
+    }
+    
+    .small-screen-pdf {
+        display: flex;
+    }
+}
